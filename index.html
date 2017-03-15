@@ -12,12 +12,14 @@
     <title>Navbar Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-   
+    <link href="css/bootstrap.min.css" rel="stylesheet">   
 
     <!-- Custom styles for this template -->
     <link href="css/navbar.css" rel="stylesheet">
+
+    <link href="css/searchbar.css" rel="stylesheet">
+
+    
    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -46,18 +48,19 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">              
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Go to Projects <span class="caret"></span></a>
-                <ul class="dropdown-menu">
+                <a href="#" id="searchDropDown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Go to Projects <span class="caret"></span></a>
+                <ul class="dropdown-menu customDropDown">
                   
-                  <li><input id="searchText"/><li>    
+
+                  <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-search"></i></span>
+                    <li><input id="searchText" placeholder="Search..." type="text" class="form-control" autofocus/><li>    
+                  </div>
 
                   <li id="searchTable"></li>  
     
 
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <ul> <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li></ul>
+                 
                   
                   
                 </ul>
@@ -67,14 +70,16 @@
         </div><!--/.container-fluid -->
       </nav>
 
-
-
+    
     
 
 
 
     </div> <!-- /container -->
-<div id='tempDiv'></div>    
+ 
+
+  
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
