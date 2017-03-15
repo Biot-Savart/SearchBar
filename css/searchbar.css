@@ -1,0 +1,86 @@
+.highlight
+{
+  	background-color: yellow;
+   	font-style: italic;
+}
+
+
+.projectName
+{
+	font-weight: bold;
+	font-size: 15px;
+	margin-left: 10px;
+    padding-left: 10px;
+    width: 150px;
+}
+
+.projectName a
+{
+	display:block;
+	width: 150px;	
+}
+
+
+.projectName a:hover
+{
+	text-decoration:none;
+	background-color: #B0FFFF;
+}
+
+.projectList
+{
+	padding-left: 5px;			
+}
+
+.groupName
+{
+	width: 132px;
+}
+
+.groupName a
+{
+	display:block;
+	width: 132px;
+	padding:2px; 
+}
+
+.groupName a:link, .groupName a:visited
+{
+	color: grey;
+}
+
+.groupName a:hover
+{
+	background-color: #B0FFFF;
+	text-decoration:none;
+	width: 132px;
+	
+}
+
+
+.groupList
+{
+	list-style-type: none;
+	outline: none;
+	padding-left: 25px;
+}
+
+.active
+{
+	background-color: #E0FFFF;
+}
+
+.customDropDown
+{
+	 max-height:80vh;    
+    overflow:auto;    
+    width:210px;
+    overflow-x: hidden;
+}
+
+.input-group
+{
+	padding-left: 5px;
+    padding-right: 5px;
+}
+
