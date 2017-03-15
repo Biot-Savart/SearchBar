@@ -230,41 +230,45 @@ function search(searchText)
 
     var newData = JSON.parse(JSON.stringify(data)); //copy the data array
 
+    //if no search text show all
     if (searchText == "")
     {
-        addSearch(newData);
+        addSearch(newData, "");
         return;
     }
 
+    //cycle through projects
     for (var pcount = 0; pcount < newData.length; pcount++)
-    {           
+    {        
+        //cycle through groups   
         for (var groupCount = 0; groupCount < newData[pcount].groups.length; groupCount++) 
         {
+                //Split group name using search text
                 var groupRes = newData[pcount].groups[groupCount].name.toLowerCase().split(searchText);
 
+                //if split result == 1 then search text not in group name the remove group from list
                 if (groupRes.length == 1)
                 {
-                    newData[pcount].groups.splice(groupCount,1);
+                    newData[pcount].groups.splice(groupCount,1); //remove group from list
                     groupCount--;
                     continue;
                 }
                 
         }
 
+        //Split project name using search text
         var ProjectRes = newData[pcount].name.toLowerCase().split(searchText);  
 
+        //if split result == 1 (search text not in project name) and project has no groups remove project from list
         if (ProjectRes.length == 1 && newData[pcount].groups.length == 0)
         {
-            newData.splice(pcount,1);
+            newData.splice(pcount,1);   //remove project from list
             pcount--;
         }       
     }   
 
+    //update list on frontend
     addSearch(newData,searchText);
-
-
 }
-
-
 
 </script>

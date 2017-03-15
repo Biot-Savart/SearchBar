@@ -14,18 +14,35 @@
     width: 150px;
 }
 
+.projectName a
+{
+	display:block;
+	width: 150px;	
+}
+
 
 .projectName a:hover
 {
 	text-decoration:none;
-	background-color: #E0FFFF;
+	background-color: #B0FFFF;
 }
 
 .projectList
 {
-	padding-left: 5px;		
+	padding-left: 5px;			
 }
 
+.groupName
+{
+	width: 132px;
+}
+
+.groupName a
+{
+	display:block;
+	width: 132px;
+	padding:2px; 
+}
 
 .groupName a:link, .groupName a:visited
 {
@@ -34,8 +51,10 @@
 
 .groupName a:hover
 {
-	background-color: #E0FFFF;
+	background-color: #B0FFFF;
 	text-decoration:none;
+	width: 132px;
+	
 }
 
 
@@ -43,6 +62,7 @@
 {
 	list-style-type: none;
 	outline: none;
+	padding-left: 25px;
 }
 
 .active
@@ -60,7 +80,7 @@
 
 .input-group
 {
-	    padding-left: 5px;
+	padding-left: 5px;
     padding-right: 5px;
 }
 
