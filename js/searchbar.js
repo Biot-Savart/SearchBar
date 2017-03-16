@@ -122,6 +122,7 @@ function focusFirst()
 {	
 	$('#searchText').focus();	
     $('.listItem').eq( 0 ).css( "background-color", "#E0FFFF" );
+    listPosition = 0;
 }
 
 //Highlight the search text within the list item's text
