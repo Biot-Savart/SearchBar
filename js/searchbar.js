@@ -5,10 +5,15 @@ var listPosition = 0;
 
 $(document).ready(function () {  
 
+	initSearch();
+});
+
+function initSearch()
+{
 	//load the data on first load
 	loadData();
 
-	//fire events when key are pressed in the search text input
+	//fire events when keys are pressed in the search text input
 	$('#searchText')
 	.keyup(function(event)
 		{
@@ -17,7 +22,7 @@ $(document).ready(function () {
 
 			//clear the search interval
 			clearInterval(searchInterval);
-			//only execute search after no input for 500 ms
+			//only execute search after no input for 200 ms
 			searchInterval = setInterval(function(){search(event.currentTarget.value.toLowerCase())},200);				
 		}).keydown(function(e) {
     	switch(e.which) {       //what key was pressed
@@ -48,7 +53,7 @@ $(document).ready(function () {
     e.preventDefault(); // prevent the default action (scroll / move caret)
 
 	});
-});
+}
 
 //Load the json data user for the project list
 function loadData()
