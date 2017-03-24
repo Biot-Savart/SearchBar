@@ -46,12 +46,14 @@
                 <a href="#" id="searchDropDown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Go to Projects <span class="caret"></span></a>
                 <ul class="dropdown-menu customDropDown">                  
 
+                <!--Input and element the search results will be populated in-->
                   <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-search"></i></span>
-                    <li><input id="searchText" placeholder="Search..." type="text" class="form-control" autofocus/><li>    
+                    <input id="searchText" placeholder="Search..." type="text" class="form-control" autofocus/>  
                   </div>
 
-                  <li id="searchTable"></li>                  
+                  <li id="search"></li>    
+                  <!--========================================================== -->              
                   
                 </ul>
               </li>
@@ -60,9 +62,7 @@
         </div><!--/.container-fluid -->
       </nav>
     </div> <!-- /container -->
- 
 
-  
 
 
     <!-- Bootstrap core JavaScript
@@ -72,6 +72,22 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/searchbar.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {  
+
+        //Get reference to the search object
+        var search = SearchBar;
+  
+        //Load the json data user for the project list
+        $.getJSON( "https://raw.githubusercontent.com/Biot-Savart/SearchBar/develop/data.json", function( pdata ) {
+      
+            //initialise the search
+            search.initSearch('#search', pdata);    
+           
+          });
+    });
+    </script>
    
   </body>
 </html>
