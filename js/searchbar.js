@@ -65,7 +65,7 @@ var SearchBar =
 		//scroll so that selected item is in view
 		container.animate({
 	   	scrollTop: item.offset().top - container.offset().top + container.scrollTop() - 100
-		},200)
+		},200);
 
 	},
 
@@ -168,4 +168,4 @@ var SearchBar =
 		//update list on frontend
 		this.addSearch(newData,searchText);
 	}
-}
+};
